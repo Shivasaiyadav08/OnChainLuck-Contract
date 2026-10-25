@@ -100,14 +100,17 @@ The unit suite in `test/unit/Raffletest.t.sol` exercises entry validation, entry
 
 These are the tests present in the repository; this README does not assert a coverage percentage or a successful run in your environment.
 
-### Other checks
+### Format and validate before pushing
 
 ```bash
+forge fmt
 forge fmt --check
 forge build --sizes
 forge test --gas-report
 forge snapshot
 ```
+
+`forge fmt` updates Solidity formatting; `forge fmt --check` only checks it. Review and commit the formatted Solidity files before pushing. Editing this README does not resolve a Solidity formatting failure.
 
 The GitHub Actions workflow runs formatting, build-size checks, and verbose tests. Its badge above reflects the live workflow state.
 
